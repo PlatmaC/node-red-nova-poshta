@@ -1,6 +1,6 @@
 {
   "name": "node-red-nova-poshta",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node for retrieving tracking information from Nova Poshta.",
   "main": "index.js",
   "scripts": {

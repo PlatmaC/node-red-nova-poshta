@@ -1,5 +1,5 @@
 module.exports = function (RED) {
-  const got = require('got');
+  const got = import('got');
   const NOVAPOSHTA_URI = 'https://api.novaposhta.ua/v2.0/json/';
   function NovaPoshta(config) {
     RED.nodes.createNode(this, config);

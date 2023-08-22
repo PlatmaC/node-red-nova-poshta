@@ -1,0 +1,7 @@
+.history/
+node_modules/
+.env
+.env_dev
+.env_stage
+
+

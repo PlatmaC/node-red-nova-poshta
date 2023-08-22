@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    RED.nodes.registerType('nova-poshta',{
+        category: 'function',
+        color: '#ff999a',
+        defaults: {
+            apikey: { value: "", required: true },
+        },
+        inputs:1,
+        outputs:1,
+        outputLabels: ["apikey"],
+        icon: "white-globe.svg",
+        apikey:this.apikey,
+        config: {apikey:this.apikey},
+        label: function () {
+            return this.name;
+        },
+    });
+</script>
+
+<script type="text/html" data-template-name="nova-poshta">
+    <div class="form-row">
+        <label for="node-input-apikey"><i class="fa fa-tag"></i> NP ApiKey</label>
+        <input type="text" id="node-input-apikey" placeholder="***">
+    </div>
+    <div class="form-tips">
+        <b>Tip:</b> Please input an API Key here, which you can acquire through this provided
+        <a href="https://developers.novaposhta.ua/" target="_blank" rel="noopener noreferrer">link</a>.
+    </div>
+</script>
+
+<script type="text/html" data-help-name="nova-poshta">
+    <p>Node for retrieving tracking information from Nova Poshta.</p>
+    <p>Please provide a Nova Poshta TTN to:</p><p> <b>msg.npTTN</b> - <i>required</i></p>
+    <p>Also, if you want to get more info you may provide a recepient phone to:</p><p> <b>msg.npPhone</b> - <i>optional</i></p>
+    <hr>
+    <p>This node is need to config. Please input an API Key, which you can acquire through this provided
+        <a href="https://developers.novaposhta.ua/" target="_blank" rel="noopener noreferrer">link</a>.</p>
+</script>

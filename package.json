@@ -1,17 +1,21 @@
 {
   "name": "node-red-nova-poshta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node for retrieving tracking information from Nova Poshta.",
   "main": "index.js",
   "scripts": {
-    "start": "node-red",
     "test": "mocha test/nova-poshta_spec.js"
   },
   "keywords": [
     "node-red",
     "novaposhta"
   ],
-  "author": "Hooke <hooke72@gmail.com>",
+  "homepage": "https://github.com/PlatmaC/node-red-nova-poshta",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PlatmaC/node-red-nova-poshta"
+  },
+  "author": "Hooke <platma@platma.com>",
   "license": "ISC",
   "node-red": {
     "nodes": {

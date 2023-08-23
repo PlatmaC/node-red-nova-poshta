@@ -1,7 +1,8 @@
 {
-  "name": "@platma/node-red-nova-poshta",
-  "version": "1.0.4",
+  "name": "@platmac/red-nova-poshta",
+  "version": "1.0.6",
   "description": "Node for retrieving tracking information from Nova Poshta.",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "mocha test/nova-poshta_spec.js"
@@ -13,7 +14,7 @@
   "homepage": "https://github.com/PlatmaC/node-red-nova-poshta",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PlatmaC/node-red-nova-poshta"
+    "url": "git+https://github.com/PlatmaC/node-red-nova-poshta.git"
   },
   "author": "Hooke <platma@platma.com>",
   "license": "ISC",
@@ -26,7 +27,6 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -35,5 +35,14 @@
     "node-red": "^3.0.2",
     "node-red-node-test-helper": "^0.3.2",
     "prettier": "^2.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/PlatmaC/node-red-nova-poshta/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "got": "^13.0.0"
   }
 }

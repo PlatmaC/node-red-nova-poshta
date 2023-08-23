@@ -1,0 +1,113 @@
+[
+  {
+    "id": "6cad7edf40d2a0c2",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "ccc32b9b035c1b8b",
+    "type": "nova-poshta",
+    "z": "6cad7edf40d2a0c2",
+    "apikey": "enterApiKeyHere",
+    "x": 410,
+    "y": 140,
+    "wires": [
+      [
+        "21ade8ba47249e81",
+        "a84eecae7192d710",
+        "2393d1463deef6bf"
+      ]
+    ]
+  },
+  {
+    "id": "5334acab80834228",
+    "type": "inject",
+    "z": "6cad7edf40d2a0c2",
+    "name": "",
+    "props": [
+      {
+        "p": "npTTN",
+        "v": "20450740288123",
+        "vt": "str"
+      },
+      {
+        "p": "npPhone",
+        "v": "0675555555",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 170,
+    "y": 140,
+    "wires": [
+      [
+        "ccc32b9b035c1b8b"
+      ]
+    ]
+  },
+  {
+    "id": "21ade8ba47249e81",
+    "type": "switch",
+    "z": "6cad7edf40d2a0c2",
+    "name": "",
+    "property": "payload.success",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "true"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 610,
+    "y": 60,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a84eecae7192d710",
+    "type": "switch",
+    "z": "6cad7edf40d2a0c2",
+    "name": "",
+    "property": "payload.success",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "false"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 610,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2393d1463deef6bf",
+    "type": "debug",
+    "z": "6cad7edf40d2a0c2",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 620,
+    "y": 220,
+    "wires": []
+  }
+]

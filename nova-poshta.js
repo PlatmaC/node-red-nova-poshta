@@ -1,5 +1,5 @@
 module.exports = function (RED) {
-  const got = require('got');
+  const axios = require('axios');
   const NOVAPOSHTA_URI = 'https://api.novaposhta.ua/v2.0/json/';
   function NovaPoshta(config) {
     RED.nodes.createNode(this, config);
@@ -29,10 +29,11 @@ module.exports = function (RED) {
         text: 'http-request-np.status.requesting',
       });
 
-      got(NOVAPOSHTA_URI, {
-        method: 'POST',
+      axios({
+        method: 'post',
+        url: NOVAPOSHTA_URI,
         headers: config.headers,
-        json: {
+        data: {
           apiKey: config.apikey,
           modelName: 'TrackingDocument',
           calledMethod: 'getStatusDocuments',
@@ -47,8 +48,8 @@ module.exports = function (RED) {
         },
       })
         .then((res) => {
-          msg.statusCode = res.statusCode;
-          const body = JSON.parse(res.body);
+          msg.statusCode = res.status;
+          const body = res.data;
           msg.payload = {
             success: body.success,
             deliveryStatus:

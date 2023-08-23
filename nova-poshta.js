@@ -1,23 +1,23 @@
 module.exports = function (RED) {
-  const got = import('got');
+  const got = require('got');
   const NOVAPOSHTA_URI = 'https://api.novaposhta.ua/v2.0/json/';
   function NovaPoshta(config) {
     RED.nodes.createNode(this, config);
     const node = this;
     node.on('input', function (msg, nodeSend, nodeDone) {
       if (!msg.npTTN) {
-        node.error(RED._('nova-poshta.errors.no-ttn'), msg);
+        node.error(RED._('novaposhta-track.errors.no-ttn'), msg);
         node.status({ fill: 'red', shape: 'dot', text: 'Error. No ttn' });
         nodeDone();
         return;
       }
 
       if (!msg.npPhone) {
-        node.warn(RED._('nova-poshta.warning.no-phone-number'));
+        node.warn(RED._('novaposhta-track.warning.no-phone-number'));
       }
 
       if (!config.apikey) {
-        node.error(RED._('nova-poshta.errors.no-apikey'));
+        node.error(RED._('novaposhta-track.errors.no-apikey'));
         node.status({ fill: 'red', shape: 'dot', text: 'Error. No apikey' });
         nodeDone();
         return;
@@ -93,5 +93,5 @@ module.exports = function (RED) {
       node.status({});
     });
   }
-  RED.nodes.registerType('nova-poshta', NovaPoshta);
+  RED.nodes.registerType('novaposhta-track', NovaPoshta);
 };

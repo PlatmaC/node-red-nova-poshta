@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('nova-poshta',{
+    RED.nodes.registerType('novaposhta-track',{
         category: 'function',
         color: '#ff999a',
         defaults: {
@@ -17,7 +17,7 @@
     });
 </script>
 
-<script type="text/html" data-template-name="nova-poshta">
+<script type="text/html" data-template-name="novaposhta-track">
     <div class="form-row">
         <label for="node-input-apikey"><i class="fa fa-tag"></i> NP ApiKey</label>
         <input type="text" id="node-input-apikey" placeholder="***">
@@ -28,7 +28,7 @@
     </div>
 </script>
 
-<script type="text/html" data-help-name="nova-poshta">
+<script type="text/html" data-help-name="novaposhta-track">
     <p>Node for retrieving tracking information from Nova Poshta.</p>
     <p>Please provide a Nova Poshta TTN to:</p><p> <b>msg.npTTN</b> - <i>required</i></p>
     <p>Also, if you want to get more info you may provide a recepient phone to:</p><p> <b>msg.npPhone</b> - <i>optional</i></p>

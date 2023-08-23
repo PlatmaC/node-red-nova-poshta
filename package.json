@@ -1,5 +1,5 @@
 {
-  "name": "node-red-nova-poshta",
+  "name": "@platma/node-red-nova-poshta",
   "version": "1.0.4",
   "description": "Node for retrieving tracking information from Nova Poshta.",
   "main": "index.js",
@@ -18,9 +18,13 @@
   "author": "Hooke <platma@platma.com>",
   "license": "ISC",
   "node-red": {
+    "version": ">=2.0.0",
     "nodes": {
       "nova-poshta": "nova-poshta.js"
     }
+  },
+  "engines": {
+    "node": ">=12.0.0"
   },
   "dependencies": {},
   "devDependencies": {
